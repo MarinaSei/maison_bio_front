@@ -1,0 +1,70 @@
+<header>
+    <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-ligh ">  
+        <a href="./" class="navbar-brand">
+            <img src="./assets/logoMaison.png" alt="Logo La Petite Maison Bio">
+        </a>
+        <a href="#" class="btn btn-outline-success "><i class="fas fa-seedling"></i> Contact</a>
+        <a [routerLink]='["inscription"]' class="btn btn-outline-success"><i class="fas fa-user-plus"></i> S'inscrire</a>
+        <a [routerLink]='["authentification"]' class="btn btn-outline-success"><i class="fas fa-user"></i> Se connecter</a>
+        <a href="#" class="btn btn-success"><i class="fas fa-shopping-bag"></i> Panier</a>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #c7e3a1;">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fab fa-envira"></i> Dans la cuisine
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#"><i class="fab fa-pagelines"></i> Bee Wraps</a>
+                        <a class="dropdown-item" href="#"><i class="fab fa-pagelines"></i> Essuie-tout</a>
+                        <a class="dropdown-item" href="#"><i class="fab fa-pagelines"></i> Pailles</a>
+                        <a class="dropdown-item" href="#"><i class="fab fa-pagelines"></i> Cake Vaisselle</a>
+                      </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >
+                        <i class="fab fa-envira"></i> Dans la salle de bain
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fab fa-envira"></i> En balade
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fab fa-envira"></i> Les cosmétiques
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#"><i class="fab fa-pagelines"></i> Savons</a>
+                      <a class="dropdown-item" href="#"><i class="fab fa-pagelines"></i> Shampoings</a>
+                      <a class="dropdown-item" href="#"><i class="fab fa-pagelines"></i> Dentifrices</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Rechercher">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid" id="wallpaper">
+        <section>
+            <article>
+                <h1>La Petite Maison Bio</h1>
+                <h2>Boutique Zéro-déchet engagée</h2>
+                <p>Bienvenue chez « La Petite Maison Bio », boutique zéro-déchet engagée. Vous y trouverez toutes les alternatives écologiques pour un mode de vie plus durable mais aussi de nombreux conseils et astuces. Une question, un conseil ? Nous sommes disponibles et heureux de partager nos astuces zéro-déchet avec vous !</p>
+                <a [routerLink]='["produits"]' class="btn btn-success" role="button">Tous nos produits</a>
+            </article>
+        </section>
+    </div>
+
+</header>

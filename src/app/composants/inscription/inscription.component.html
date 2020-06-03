@@ -1,0 +1,66 @@
+<form #inscriptionForm=ngForm (ngSubmit)=inscription()>
+    <h3 class="dark-green">Inscription <i class="fas fa-leaf"></i></h3>
+    <div>
+        <label>Nom : </label>
+        <input type=nom name=nom [(ngModel)]=user.nom required #nom = "ngModel">
+    </div>
+    <div [hidden]="nom.valid || nom.pristine">
+        <p class="wanted">* Le nom est obligatoire</p>
+    </div>
+    <div>
+        <label>Prénom : </label>
+        <input type=prenom   name=prenom [(ngModel)]=user.prenom required #prenom = "ngModel">
+    </div>
+    <div [hidden]="prenom.valid || prenom.pristine">
+        <p class="wanted">* Le prénom est obligatoire</p>
+    </div>
+    <div>
+        <label>Email : </label>
+        <input type=email  name=email [(ngModel)]=user.email required #email = "ngModel">
+    </div>
+    <div [hidden]="email.valid || email.pristine"> 
+        <p class="wanted">* L'e-mail est obligatoire</p>
+    </div>
+    <div>
+        <label>Rue : </label>
+        <input type=text name=rue [(ngModel)]=user.rue required #rue = "ngModel">
+    </div>
+    <div [hidden]="rue.valid || rue.pristine">
+        <p class="wanted">* La rue est obligatoire</p>
+    </div>
+    <div>
+        <label>Code Postal : </label>
+        <input type=text name=codepostal [(ngModel)]=user.codePostal required #codePostal = "ngModel">
+    </div>
+    <div [hidden]="codePostal.valid || codePostal.pristine">
+        <p class="wanted">* Le code postal est obligatoire</p>
+    </div>
+    <div>
+        <label>Ville : </label>
+        <input type=text name=ville [(ngModel)]=user.ville required #ville = "ngModel">
+    </div>
+    <div [hidden]="ville.valid || ville.pristine">
+        <p class="wanted">* La ville est obligatoire</p>
+    </div>
+    <div>
+        <label>Numéro de téléphone: </label>
+        <input type=phone name=tel [(ngModel)]=user.telephone required #tel = "ngModel">
+    </div>
+    <div [hidden]="tel.valid || tel.pristine">
+        <p class="wanted">* Le n° de téléphone est obligatoire</p>
+    </div>
+    <div>
+        <label>Mot de passe : </label>
+        <input type=password name=password [(ngModel)]=user.password required #password = "ngModel">
+    </div>
+    <div [hidden]="password.valid || password.pristine">
+        <p class="wanted">* Le mot de passe est obligatoire</p>
+    </div>
+    
+    <div>
+        <button type="submit" class="btn btn-success" [disabled]=!inscriptionForm.valid >
+            S'inscrire <i class="fab fa-pagelines"></i>
+        </button>
+    </div>
+    
+</form>

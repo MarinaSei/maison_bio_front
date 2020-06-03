@@ -1,0 +1,29 @@
+footer {
+	text-align: center;
+	background-color: #c7e3a1;
+}
+footer ul {
+    list-style: none;
+}
+
+.banner-footer {
+	padding: 30px;
+}
+
+.banner-footer p {
+    color: #008037;
+}
+
+.banner-footer i {
+	color: #008037;
+	font-size: 2rem;
+}
+
+.banner-footer ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.licence p {
+    color: #008037;
+}

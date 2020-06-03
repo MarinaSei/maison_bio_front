@@ -1,0 +1,48 @@
+nav a {
+    margin: 0 20px 0 20px;
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #c7e3a1;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+}
+.menu a {
+    margin: 70px ;
+    color: #008037;
+}
+.nav-item a:hover {
+    color: white;
+    transition: 1.2s;
+}
+
+.nav-item a {
+    color: #008037;
+}
+
+#wallpaper {
+    margin: 0 auto;
+    text-align: center;
+    background: url("src/assets/wallpaperMaisonBio.png") center center no-repeat;
+    background-size: cover;
+    /* padding: 450px 50px; */
+}
+#wallpaper section article {
+    /* text-align: center; */
+    padding: 100px; 
+    /* width: 50%; */
+}
+#wallpaper section article h1 {
+    color: #008037;
+}
+#wallpaper section article h2 {
+    color: #c7e3a1;
+}
+
+#wallpaper section article p{
+    color: #008037;
+    font-size: 20px;
+}
+

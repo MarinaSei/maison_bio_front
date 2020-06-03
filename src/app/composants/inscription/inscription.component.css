@@ -1,0 +1,23 @@
+form {
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid #008037;
+    border-radius: 5%;
+    width: 600px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+form div {
+    margin: 20px;
+}
+form label {
+    margin: 10px;
+}
+.dark-green {
+    color: #008037;
+}
+
+.wanted {
+    color: rgb(197, 109, 124);
+    font-style: italic;
+}
