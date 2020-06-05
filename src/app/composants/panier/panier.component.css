@@ -1,0 +1,13 @@
+h3 {
+    color: #008037;
+    text-align: center;
+    margin: 40px;
+}
+
+img {
+    width: 5%;
+    height: 5%;
+}
+.total {
+    font-size: 1.5rem;
+}

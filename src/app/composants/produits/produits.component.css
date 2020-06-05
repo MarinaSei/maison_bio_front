@@ -1,0 +1,21 @@
+.presentation {
+    text-align: center;
+    margin: 40px;
+}
+.presentation h3 {
+    color: #008037;
+}
+
+.card {
+    display: inline-block;
+}
+/* 
+img {
+    width: 15%; 
+    border-bottom: 1px solid #218838;
+} */
+
+/* .card-deck {
+    margin: 20px 20px 20px 20px;
+    width: 25%;
+} */

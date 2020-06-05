@@ -1,0 +1,81 @@
+<div class="container-fluid">
+    <h3>Mon panier</h3>
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-warning">
+                    <!-- <th scope="col">Image</th> -->
+                    <th scope="col">Produit</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Total</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Faire la boucle ici-->
+                <ng-container>
+                    <tr>
+                        <td>
+                            <img src="../assets/imagesProduit/shampoing-1.jpeg" alt="image du produit">
+                            <p class="name">Nom du produit</p>
+                        </td>
+                        <td>
+                            <p>60 €</p>
+                        </td>
+                        <td>
+                            <input type="number" min="0" max="30">
+                        </td>
+                        <td>
+                            <p>Total de la ligne €</p>
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-success"><i class="fas fa-check"></i></button>
+                            <button class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                </ng-container>
+                
+                <tr>
+                    <td colspan="3">
+                        <h6>Sous-Total :</h6>
+                    </td>
+                    <td>
+                        <p>60,00 €</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <h6>Frais de port :</h6>
+                    </td>
+                    <td>
+                        <p>0,00 €</p>
+                    </td>
+                </tr>
+                <tr class="table-warning">
+                    <td colspan="3">
+                        <h4>Total :</h4>
+                    </td>
+                    <td>
+                        <p class="total">65,00 €</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                    </td>
+                    <td>
+                        <button class="btn btn-success">Valider Panier</button>
+                    </td>
+                </tr>
+                
+            </tbody>
+
+        </table>
+    </div><!--Fermeture table-responsive -->
+
+
+
+</div>
+
+

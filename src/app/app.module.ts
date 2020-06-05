@@ -10,6 +10,9 @@ import { InscriptionComponent } from './composants/inscription/inscription.compo
 import { ProduitsComponent } from './composants/produits/produits.component';
 import { AuthentificationComponent } from './composants/authentification/authentification.component';
 import { FormsModule, FormBuilder } from '@angular/forms';
+import { AdminComponent } from './composants/admin/admin.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PanierComponent } from './composants/panier/panier.component';
 
 
 @NgModule({
@@ -20,11 +23,14 @@ import { FormsModule, FormBuilder } from '@angular/forms';
     InscriptionComponent,
     ProduitsComponent,
     AuthentificationComponent,
+    AdminComponent,
+    PanierComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     
   ],
   providers: [],

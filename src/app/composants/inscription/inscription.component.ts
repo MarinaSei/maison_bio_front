@@ -15,9 +15,7 @@ export class InscriptionComponent implements OnInit {
   //users: Array<User> = [];
   user: User = {};
   
-
   constructor(private userService: UserService, private router: Router) { }
-
 
   ngOnInit(): void {
   }
@@ -26,11 +24,6 @@ export class InscriptionComponent implements OnInit {
     this.userService.addUser(this.user).subscribe(res => {
       this.router.navigateByUrl('/');
   });
-
-
-    // this.users.push({...this.user});
-    // console.log(this.users);
-
 
   }
 

@@ -1,0 +1,26 @@
+div h2 {
+    text-align: center;
+}
+.dark-green {
+    color: #008037;
+}
+form {
+    width: 30%;
+}
+
+.ng-invalid:not(form){
+    border-left: 5px solid  rgb(197, 109, 124);
+}
+.ng-valid:not(form){
+    border-left: 5px solid #c7e3a1;
+}
+.wanted {
+    color: rgb(197, 109, 124);
+    font-style: italic;
+}
+ul {
+    list-style: none;
+}
+.hidden {
+    display: none;
+}
