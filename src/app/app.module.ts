@@ -13,6 +13,8 @@ import { FormsModule, FormBuilder } from '@angular/forms';
 import { AdminComponent } from './composants/admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PanierComponent } from './composants/panier/panier.component';
+import { ProduitComponent } from './composants/produit/produit.component';
+
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { PanierComponent } from './composants/panier/panier.component';
     AuthentificationComponent,
     AdminComponent,
     PanierComponent,
+    ProduitComponent,
   ],
   imports: [
     BrowserModule,

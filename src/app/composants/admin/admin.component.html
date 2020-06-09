@@ -79,7 +79,7 @@
             <thead>
                 <tr class="table-danger">
                     <th scope="col">Nom</th>
-                    <th scope="col">Catégorie</th>
+                    <!-- <th scope="col">Catégorie</th> -->
                     <th scope="col">Description</th>
                     <th scope="col">Prix TTC unitaire</th>
                     <th scope="col">Quantité en stock</th>
@@ -95,10 +95,10 @@
                             <p>{{ produit.nom }}</p>
                             <input type="text" [hidden]=cachee placeholder="{{ produit.nom }}">
                         </td>
-                        <td>
+                        <!-- <td>
                             <p>{{ produit.categorie }}</p>
                             <input type="text" [hidden]=cachee placeholder="{{ produit.categorie }}">
-                        </td>
+                        </td> -->
                         <td>
                             <p>{{ produit.description }}</p>
                             <input type="text" [hidden]=cachee placeholder="{{ produit.description }}">

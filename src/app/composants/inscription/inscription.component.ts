@@ -22,7 +22,7 @@ export class InscriptionComponent implements OnInit {
 
   inscription() {
     this.userService.addUser(this.user).subscribe(res => {
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/produits');
   });
 
   }

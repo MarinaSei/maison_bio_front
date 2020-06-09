@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Produit } from 'src/app/interfaces/produit';
 import { ProduitService } from 'src/app/services/produit.service';
+
 
 @Component({
   selector: 'app-produits',
@@ -10,10 +11,14 @@ import { ProduitService } from 'src/app/services/produit.service';
 export class ProduitsComponent implements OnInit {
   produits: Array<Produit> = [];
   produit = {};
+  quantite = 1;
 
+ @Output() message = new EventEmitter();
+ 
   constructor(private produitService: ProduitService) { }
 
   ngOnInit(): void {
+    // Au chargement de la page, j'affiche les produits
     this.afficherProduits();
   }
 
@@ -25,6 +30,14 @@ export class ProduitsComponent implements OnInit {
       }
     )
   }
+
+  ajouterPanier() {
+    this.message.emit({produit: this.produit, quantite: this.quantite});
+    //console.log(this.message);
+  } 
+
+
+  
 
 
 

@@ -1,0 +1,18 @@
+<!-- <div class="col-md-4 col-sm-6">
+    <div class="card-deck"> -->
+        <div class="card">
+            <h1>Je suis un fils</h1>
+            <img src="../assets/imagesProduit/{{ produit.image }}" class="card-img-top" alt="image produit">
+            <div class="card-body">
+                
+                <h5 class="card-title">{{produit.nom}}</h5>
+                <p class="card-text">{{ produit.description }}</p>
+                <p class="card-text">{{ produit.prixTTCunit }} €</p>
+                <a [routerLink]='["/produits", produit.id]' class="btn btn-outline-success">En savoir plus ...</a>
+                <button type="button" class="btn btn-outline-danger" (click)="ajouterPanier()">
+                    <i class="fas fa-shopping-bag"></i>
+                </button>
+            </div>
+        </div>
+    <!-- </div>
+</div> -->

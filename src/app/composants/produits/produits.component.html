@@ -11,18 +11,7 @@
                 <ng-container *ngFor="let produit of produits">
                     <div class="col-md-4 col-sm-6">
                         <div class="card-deck">
-                            <div class="card">
-                                <img src="./assets/imagesProduit/{{ produit.image }}" class="card-img-top" alt="image produit">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{produit.nom}}</h5>
-                                    <p class="card-text">{{ produit.description }}</p>
-                                    <p class="card-text">{{ produit.prixTTCunit }} €</p>
-                                    <a href="#" class="btn btn-outline-success">En savoir plus ...</a>
-                                    <button type="button" class="btn btn-outline-danger">
-                                        <i class="fas fa-shopping-bag"></i>
-                                    </button>
-                                </div>
-                            </div>
+                            <app-produit [produit]='produit'></app-produit>
                         </div>
                     </div>
                 </ng-container>
