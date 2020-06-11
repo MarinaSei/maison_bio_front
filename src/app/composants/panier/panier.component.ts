@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Produit } from 'src/app/interfaces/produit';
 import { Panier } from 'src/app/interfaces/panier';
+import { ProduitService } from 'src/app/services/produit.service';
 // import { PanierService } from 'src/app/services/panier.service';
 
 @Component({
@@ -10,16 +11,29 @@ import { Panier } from 'src/app/interfaces/panier';
 })
 export class PanierComponent implements OnInit {
   // J'initialise mon tableau de produits
-  produits : Array<Produit> = [];
+  produits : Array<Produit> = [
+    { id: 1, nom: 'Dentifrice', description: 'ajout1', prixTTCunit: "8", quantiteEnStock: 20, image: 'dentifrice-1.jpeg' },
+    { id: 2, nom: 'Shampoing solide', description: 'ajout2', prixTTCunit: "10", quantiteEnStock: 20, image: 'shampoing-1.jpeg' },
+  ];
   produit : Produit = {};
   nombre = 0;
   total = 0;
 
-  constructor( ) { }
+  constructor(private produitService: ProduitService) { }
 
   ngOnInit(): void {
+    //this.afficherProduits();
     this.afficherTotal(this.produit);
     console.log(this.produit);
+  }
+
+  afficherProduits() {
+    this.produitService.getAllProducts().subscribe(
+      data => {
+        console.log(this.produits);
+        this.produits = data;
+      }
+    )
   }
 
   ajouterLigne() {
@@ -29,9 +43,10 @@ export class PanierComponent implements OnInit {
 
   afficherTotal(objet) {
     console.log(objet);
+    console.log(objet.quantite);
     this.nombre += objet.quantite;
-    this.total += objet.produit.prixTTCunit * objet.quantite;
     console.log(this.nombre);
+    this.total += objet.produit.prixTTCunit * objet.quantite;
     console.log(this.total);
 
   }

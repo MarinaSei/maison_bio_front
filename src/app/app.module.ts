@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PanierComponent } from './composants/panier/panier.component';
 import { ProduitComponent } from './composants/produit/produit.component';
 import { ProduitPanierComponent } from './composants/produit-panier/produit-panier.component';
+import { CommandeComponent } from './composants/commande/commande.component';
 
 
 
@@ -31,6 +32,7 @@ import { ProduitPanierComponent } from './composants/produit-panier/produit-pani
     PanierComponent,
     ProduitComponent,
     ProduitPanierComponent,
+    CommandeComponent,
 
   ],
   imports: [

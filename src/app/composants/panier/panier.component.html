@@ -1,87 +1,24 @@
-<div class="container-fluid">
-    <h3>Mon panier</h3>
-    <p>Vous avez {{ nombre }} d'articles dans votre panier</p>
+<h2>Liste de produits</h2>
+<h4>Nombre d'articles dans le panier : {{ nombre }} articles</h4>
+<h4>Total : {{ total }} €</h4>
 
-    <div class="table-responsive">
-        <table class="table table-hover">
-            <thead>
-                <tr class="table-warning">
-                    <th scope="col">Image</th>
-                    <th scope="col">Produit</th>
-                    <th scope="col">Prix</th>
-                    <th scope="col">Quantité</th>
-                    <th scope="col">Total</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <!--Faire la boucle ici-->
-                <tr>
-                    <ng-container>
-                        <td>
-                            <img src="../assets/imagesProduit/shampoing-1.jpeg" alt="image du produit">
-                        </td>
-                        <td>
-                            <p class="name">Nom du produit</p>
-                        </td>
-                        <td>
-                            <p>60 €</p>
-                        </td>
-                        <td><!--Je bloque la valeur max par la quantité en stock dispo -->
-                            <input type="number" min="0" max="30" value=''>
-                        </td>
-                        <td>
-                            <p>Total de la ligne €</p>
-                        </td>
-                        <td>
-                            <button class="btn btn-outline-success"><i class="fas fa-check"></i></button>
-                            <button class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></button>
-                        </td>
-                        <!-- <app-produit *ngFor="let produit of produits" [produit]='produit' (message)='afficherTotal($event)'></app-produit> -->
-                    </ng-container>
-                </tr>
-            </tbody>
+<section>
+    <article>
+        <div class="row">
+            <!-- <ng-container *ngFor="let produit of produits"> {{ produit | json }}
+            </ng-container> -->
+            <ng-container *ngFor="let produit of produits">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card-deck">
+                        <app-produit [produit]='produit' (message)='afficherTotal($event)'></app-produit>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </article>
+</section>
 
-            <tfoot>
-                <tr>
-                    <td colspan="4" class="text-right">
-                        <h6>Sous-Total :</h6>
-                    </td>
-                    <td>
-                        <p>60,00 €</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="4" class="text-right">
-                        <h6>Frais de port :</h6>
-                    </td>
-                    <td>
-                        <p>5,00 €</p>
-                    </td>
-                </tr>
-                <tr class="table-warning">
-                    <td colspan="4" class="text-right">
-                        <h4>Total :</h4>
-                    </td>
-                    <td>
-                        <p class="total">{{ total }} €</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="4">
-                    </td>
-                    <td>
-                        <button class="btn btn-success"><i class="far fa-check-circle"></i> Valider Panier</button>
-                    </td>
-                </tr>
-                
-        </tfoot>
-
-        </table>
-    </div><!--Fermeture table-responsive -->
-
-    <app-produit *ngFor="let produit of produits" [produit]='produit' (message)='afficherTotal($event)'></app-produit>
-    
-</div>
-
+<!-- <div>
+    <a [routerLink]='["/produits"]' class="btn btn-outline-danger retour"><i class="fas fa-arrow-circle-left"></i> Retour</a>
+</div> -->
 
