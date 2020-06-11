@@ -1,5 +1,6 @@
 <div class="container-fluid">
     <h3>Mon panier</h3>
+    <p>Vous avez {{ nombre }} d'articles dans votre panier</p>
 
     <div class="table-responsive">
         <table class="table table-hover">
@@ -36,7 +37,7 @@
                             <button class="btn btn-outline-success"><i class="fas fa-check"></i></button>
                             <button class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></button>
                         </td>
-                        <app-produit *ngFor="let produit of produits" [produit]='produit' (message)='afficherTotal($event)'></app-produit>
+                        <!-- <app-produit *ngFor="let produit of produits" [produit]='produit' (message)='afficherTotal($event)'></app-produit> -->
                     </ng-container>
                 </tr>
             </tbody>
@@ -63,7 +64,7 @@
                         <h4>Total :</h4>
                     </td>
                     <td>
-                        <p class="total"> €</p>
+                        <p class="total">{{ total }} €</p>
                     </td>
                 </tr>
                 <tr>

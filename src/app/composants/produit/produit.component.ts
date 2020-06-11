@@ -17,19 +17,23 @@ export class ProduitComponent implements OnInit {
   quantite = 1;
 
   @Input() produit : Produit;
+
   @Output() message = new EventEmitter();
 
-  constructor(private route: ActivatedRoute, private produitService: ProduitService, private router : Router) { }
+  constructor() { }
 
   ngOnInit(): void {
     console.log(this.produit);
   }
 
-  ajouterPanier() { 
+  // Exemple du cours
+  ajouterPanier() {
+    // J'émet un message à mon composant pour transmettre le produit sélectionné & la quantité
     this.message.emit({ produit: this.produit, quantite: this.quantite })
+    // Console log qui marchent
     console.log(this.produit);
+    console.log(this.quantite);
   }
-
 
   verifierQuantite() {
     

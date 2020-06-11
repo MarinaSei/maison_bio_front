@@ -9,15 +9,17 @@ import { Panier } from 'src/app/interfaces/panier';
   styleUrls: ['./panier.component.css']
 })
 export class PanierComponent implements OnInit {
+  // J'initialise mon tableau de produits
   produits : Array<Produit> = [];
   produit : Produit = {};
-  // nombre = 0;
-  // total = 0;
+  nombre = 0;
+  total = 0;
 
   constructor( ) { }
 
   ngOnInit(): void {
-    //this.afficherTotal(this.produit);
+    this.afficherTotal(this.produit);
+    console.log(this.produit);
   }
 
   ajouterLigne() {
@@ -26,9 +28,12 @@ export class PanierComponent implements OnInit {
   }
 
   afficherTotal(objet) {
-    // console.log(objet);
-    // this.nombre += objet.quantite;
-    // this.total += objet.produit.prixTTCunit * objet.quantite;
+    console.log(objet);
+    this.nombre += objet.quantite;
+    this.total += objet.produit.prixTTCunit * objet.quantite;
+    console.log(this.nombre);
+    console.log(this.total);
+
   }
   afficherQuantiteProduit() {
     
