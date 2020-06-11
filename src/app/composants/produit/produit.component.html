@@ -10,7 +10,7 @@
 
         <div class="col-sm-6 align-middle fiche">
             <div class="description">
-                <h5>Description du produit : </h5>
+                <h5>Description du produit:</h5>
                 <p>{{ produit.description }} </p>
             </div>
             <div class="categorie">
@@ -21,7 +21,7 @@
             </div>
             <div class="quantite">
                 <label>Choisir la quantité :</label>
-                <input type="number" min="0" max="{{ produit.quantiteEnStock }}" [(ngModel)]=quantite>
+                <input type="number" [(ngModel)]=quantite min="1" max="{{ produit.quantiteEnStock }}">
                 <!-- <div *ngIf=" produit.quantiteEnStock "> 
                     <p class="wanted">* La quantité que vous avez saisi n'est pas disponible</p>
                 </div> -->

@@ -14,7 +14,7 @@ export class ProduitComponent implements OnInit {
 
   // produit : Produit = {};
   //id: number;
-  quantite = 0;
+  quantite = 1;
 
   @Input() produit : Produit;
 
@@ -25,7 +25,6 @@ export class ProduitComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // Exemple du cours
   ajouterPanier() {
     // J'émet un message à mon composant pour transmettre le produit sélectionné & la quantité
     this.message.emit({ produit: this.produit, quantite: this.quantite })
@@ -33,7 +32,8 @@ export class ProduitComponent implements OnInit {
     console.log(this.quantite);
   }
   supprimerProduitPanier() {
-
+    this.message.emit(this.quantite = 0);
+    console.log(this.quantite);
   }
 
   verifierQuantite() {

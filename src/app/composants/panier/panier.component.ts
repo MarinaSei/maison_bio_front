@@ -12,17 +12,17 @@ import { ProduitService } from 'src/app/services/produit.service';
 export class PanierComponent implements OnInit {
   // J'initialise mon tableau de produits
   produits : Array<Produit> = [
-    { id: 1, nom: 'Dentifrice', description: 'ajout1', prixTTCunit: "8", quantiteEnStock: 20, image: 'dentifrice-1.jpeg' },
-    { id: 2, nom: 'Shampoing solide', description: 'ajout2', prixTTCunit: "10", quantiteEnStock: 20, image: 'shampoing-1.jpeg' },
+    // { id: 1, nom: 'Dentifrice', description: 'ajout1', prixTTCunit: "8", quantiteEnStock: 20, image: 'dentifrice-1.jpeg' },
+    // { id: 2, nom: 'Shampoing solide', description: 'ajout2', prixTTCunit: "10", quantiteEnStock: 20, image: 'shampoing-1.jpeg' },
   ];
   produit : Produit = {};
-  nombre = 0;
+  nombre : number = 0;
   total = 0;
 
   constructor(private produitService: ProduitService) { }
 
   ngOnInit(): void {
-    //this.afficherProduits();
+    this.afficherProduits();
     this.afficherTotal(this.produit);
     console.log(this.produit);
   }
@@ -42,14 +42,14 @@ export class PanierComponent implements OnInit {
   }
 
   afficherTotal(objet) {
+    this.nombre += objet.quantite;
+    this.total += objet.produit.prixTTCunit * objet.quantite;
+    console.log(this.nombre);
+    console.log(this.total);
     console.log(objet);
     console.log(objet.quantite);
-    this.nombre += objet.quantite;
-    console.log(this.nombre);
-    this.total += objet.produit.prixTTCunit * objet.quantite;
-    console.log(this.total);
-
   }
+
   afficherQuantiteProduit() {
     
   }
