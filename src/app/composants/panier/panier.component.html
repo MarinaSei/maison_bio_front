@@ -15,18 +15,19 @@
             </thead>
             <tbody>
                 <!--Faire la boucle ici-->
-                <ng-container>
-                    <tr>
-                        <td><img src="../assets/imagesProduit/shampoing-1.jpeg" alt="image du produit"></td>
+                <tr>
+                    <ng-container>
                         <td>
-                            
+                            <img src="../assets/imagesProduit/shampoing-1.jpeg" alt="image du produit">
+                        </td>
+                        <td>
                             <p class="name">Nom du produit</p>
                         </td>
                         <td>
                             <p>60 €</p>
                         </td>
                         <td><!--Je bloque la valeur max par la quantité en stock dispo -->
-                            <input type="number" min="0" max="30" value="{{ nombre }} ">
+                            <input type="number" min="0" max="30" value=''>
                         </td>
                         <td>
                             <p>Total de la ligne €</p>
@@ -35,8 +36,9 @@
                             <button class="btn btn-outline-success"><i class="fas fa-check"></i></button>
                             <button class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></button>
                         </td>
-                    </tr>
-                </ng-container>
+                        <app-produit *ngFor="let produit of produits" [produit]='produit' (message)='afficherTotal($event)'></app-produit>
+                    </ng-container>
+                </tr>
             </tbody>
 
             <tfoot>
@@ -61,7 +63,7 @@
                         <h4>Total :</h4>
                     </td>
                     <td>
-                        <p class="total"> {{ total }} €</p>
+                        <p class="total"> €</p>
                     </td>
                 </tr>
                 <tr>
@@ -72,14 +74,13 @@
                     </td>
                 </tr>
                 
-            
         </tfoot>
 
         </table>
     </div><!--Fermeture table-responsive -->
 
-    <app-produit *ngFor="let produit of produits" {{ produit }} (message)='afficherTotal($event)'></app-produit>
-
+    <app-produit *ngFor="let produit of produits" [produit]='produit' (message)='afficherTotal($event)'></app-produit>
+    
 </div>
 
 

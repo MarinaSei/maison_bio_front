@@ -11,49 +11,23 @@ import { ProduitService } from 'src/app/services/produit.service';
   styleUrls: ['./produit.component.css']
 })
 export class ProduitComponent implements OnInit {
-  produits: Array<Produit> = [];
-  // produit : Produit = {};
-  id: number;
-  
-  @Input() produit : Produit;
 
-  //subscription : Subscription;
+  // produit : Produit = {};
+  //id: number;
+  quantite = 1;
+
+  @Input() produit : Produit;
+  @Output() message = new EventEmitter();
 
   constructor(private route: ActivatedRoute, private produitService: ProduitService, private router : Router) { }
 
   ngOnInit(): void {
-    // Au chargement de la page 
-    // this.route.paramMap.subscribe(data => {
-    //   // Je récupère l'id de mon url
-    //   this.id = +data.get('id');
-    //   // Je récupère mon produit grâce à l'id 
-    //   this.produitService.getProduct(this.id).subscribe(
-    //     res => {
-    //       this.produit = res;
-    //       //console.log(this.id);
-    //       //console.log(res);
-    //       //console.log(Object.values(res));
-    //       console.log(this.produit.id);
-    //     }
-    //   )
-    // });
-
-    this.afficherProduit(this.produit.id);
-    
+    console.log(this.produit);
   }
 
-  afficherProduit(id: number) {
-    this.produitService.getProduct(this.id).subscribe(
-      data => {
-        this.produit = data;
-        console.log(this.produit);
-      }
-    )
-  }
-
-  // Pour l'ajout au panier, il faudra faire un observable qui passe l'information au panier
-  ajouterPanier() {
-    
+  ajouterPanier() { 
+    this.message.emit({ produit: this.produit, quantite: this.quantite })
+    console.log(this.produit);
   }
 
 
@@ -62,3 +36,12 @@ export class ProduitComponent implements OnInit {
   }
 
 }
+
+  // afficherProduit(id: number) {
+  //   this.produitService.getProduct(this.id).subscribe(
+  //     data => {
+  //       this.produit= data;
+  //       console.log(this.produit);
+  //     }
+  //   )
+  // }

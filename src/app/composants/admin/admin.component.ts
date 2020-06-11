@@ -9,23 +9,34 @@ import { ProduitService } from 'src/app/services/produit.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+
   produits : Array<Produit> = [];
   produit : Produit = {};
   cachee = true;
   modify = true;
 
-  constructor() { }
+  constructor(private produitService : ProduitService ) { }
 
   ngOnInit(): void {
+    
   }
 
   ajouterProduit() {
-    // J'ajoute le produit dans mon tableau produits avec la décomposition
     this.produits.push({...this.produit});
+    // console.log(this.produit);
+    this.produitService.addProduct(this.produit).subscribe(
+      // () => { this.produits.push({...this.produit});
+      //   console.log(this.produits)
+      // },  
+      // () => console.log("Erreur"),        
+    );
+    // J'ajoute le produit dans mon tableau produits avec la décomposition
     // Je vide les champs du formulaire
     this.produit = {};
-    console.log(this.produits);
   }
+
+
+
 
   supprimerProduit(id: number) {
     //console.log(id);

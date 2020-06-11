@@ -10,10 +10,8 @@ import { ProduitService } from 'src/app/services/produit.service';
 })
 export class ProduitsComponent implements OnInit {
   produits: Array<Produit> = [];
-  produit = {};
-  quantite = 1;
-
- @Output() message = new EventEmitter();
+  //produit = {};
+  
  
   constructor(private produitService: ProduitService) { }
 
@@ -31,10 +29,8 @@ export class ProduitsComponent implements OnInit {
     )
   }
 
-  ajouterPanier() {
-    this.message.emit({produit: this.produit, quantite: this.quantite});
-    //console.log(this.message);
-  } 
+
+  
 
 
   

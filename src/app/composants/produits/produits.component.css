@@ -8,6 +8,10 @@
 
 .card {
     display: inline-block;
+    
+}
+app-produit {
+    margin-bottom: 20px;
 }
 /* 
 img {

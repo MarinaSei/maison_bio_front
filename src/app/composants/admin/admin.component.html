@@ -33,7 +33,7 @@
         </div>
         <div class="form-group">
             <label>Prix TTC Unitaire : </label>
-            <input type="number" name="prixTTCunit" class="form-control" [(ngModel)]=produit.prixTTCunit required #prix="ngModel">
+            <input type="text" name="prixTTCunit" class="form-control" [(ngModel)]=produit.prixTTCunit required #prix="ngModel">
         </div>
         <div class="wanted" [hidden]="prix.valid || prix.pristine">
             <p>* Le prix TTC unit du produit est obligatoire </p>
@@ -91,6 +91,7 @@
             <tbody>
                 <ng-container *ngFor="let produit of produits; let i = index">
                     <tr>
+                        <!-- {{ produit | json}} -->
                         <td>
                             <p>{{ produit.nom }}</p>
                             <input type="text" [hidden]=cachee placeholder="{{ produit.nom }}">

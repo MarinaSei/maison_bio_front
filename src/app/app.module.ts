@@ -14,6 +14,8 @@ import { AdminComponent } from './composants/admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PanierComponent } from './composants/panier/panier.component';
 import { ProduitComponent } from './composants/produit/produit.component';
+import { ProduitPanierComponent } from './composants/produit-panier/produit-panier.component';
+
 
 
 
@@ -28,6 +30,8 @@ import { ProduitComponent } from './composants/produit/produit.component';
     AdminComponent,
     PanierComponent,
     ProduitComponent,
+    ProduitPanierComponent,
+
   ],
   imports: [
     BrowserModule,
